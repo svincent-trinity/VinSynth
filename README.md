@@ -1,6 +1,3 @@
-# play-scalajs-slink
+# VinSynth
 
-This is my starter project for things that involve Play using Scala.js and
-the Slinky React binding. I'm using this as the starter for student code in
-Web Apps Spring 2020.
-
+A basic synthesizer written in vanilla Javascript using the Scala Play framework. Uses the WebAudio api for filter and gain effects as well as sine, square, triangle, and sawtooth wave oscillation. Implemented my own ADSR algorithm using WebAudio's gain node. 
