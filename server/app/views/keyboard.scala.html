@@ -1,0 +1,65 @@
+@(message: String)(implicit request: MessagesRequestHeader, flash: Flash)
+
+@main("VinSynth") {
+
+  <input type="hidden" id="notePlayed"></input>
+
+  <input type="hidden" id="routeimg" value="@routes.Assets.versioned("images/keyboard-graphics/Keyboard.png")">
+  <input type="hidden" id="dotimg" value="@routes.Assets.versioned("images/keyboard-graphics/dot.png")">
+  <input type="hidden" id="volimg" value="@routes.Assets.versioned("images/keyboard-graphics/volume_knob.png")">
+  <input type="hidden" id="waveimg" value="@routes.Assets.versioned("images/keyboard-graphics/waveform-preferences.png")">
+  <input type="hidden" id="prefdotimg" value="@routes.Assets.versioned("images/keyboard-graphics/preference-dot.png")">
+  <input type="hidden" id="ASDRimg" value="@routes.Assets.versioned("images/keyboard-graphics/ADSR.png")">
+
+  
+  <input type="hidden" id="csrfToken" value="@@helper.CSRF.getToken.value">
+
+
+  <h2>Welcome to the VinSynth!</h2>
+  
+  <canvas id="kbdcanv" width="800" style="border-style: solid" height="600">Canvas</canvas>
+
+  <input type="hidden" id="notePlayed"></input>
+  <!--<img id="keyboard-main" type="hidden" src="@routes.Assets.versioned("images/keyboard-graphics/Keyboard.png")">-->
+
+  <audio id = "C4">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/C4.mp3")" type="audio/mpeg">
+  </audio>
+
+
+  <audio id = "D4">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/D4.mp3")" type="audio/mpeg">
+  </audio>
+
+
+ <audio id = "E4">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/E4.mp3")" type="audio/mpeg">
+  </audio>
+  <audio id = "F4">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/F4.mp3")" type="audio/mpeg">
+  </audio>
+
+
+
+  <audio id = "G4">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/G4.mp3")" type="audio/mpeg">
+  </audio>
+
+
+  <audio id = "A4">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/A4.mp3")" type="audio/mpeg">
+  </audio>
+
+
+  <audio id = "B4">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/B4.mp3")" type="audio/mpeg">
+  </audio>
+
+  <audio id = "C5">
+    <source src="@routes.Assets.versioned("sounds/virtual-piano/C5.mp3")" type="audio/mpeg">
+  </audio>
+
+
+  <script src="@routes.Assets.versioned("javascript/keyboard.js")"></script>
+
+}
